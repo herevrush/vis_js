@@ -1,25 +1,27 @@
 @CHARSET "ISO-8859-1";
 
 html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: "metric-regular",Helvetica,Arial,sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "metric-regular", Helvetica, Arial, sans-serif;
 }
 
-#map-canvas,#map-canvas2  {
-	height: 400px;
-	width: 100%;
-	margin: 10px;
-	padding: 10px;
-	float: left;
+#map-canvas, #map-canvas2 {
+    height: 700px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    float: left;
 }
-#map-canvas1 ,#map-canvas3 {
-	/*height: 60%;*/
-	/*width: 40%;*/
-	/*margin: 20px;*/
-	/*padding: 20px;*/
+
+#map-canvas1, #map-canvas3 {
+    /*height: 60%;*/
+    /*width: 40%;*/
+    /*margin: 20px;*/
+    /*padding: 20px;*/
 }
+
 #container1 {
     background: none repeat scroll 0 0 #fff;
     font-size: 1.2em;
@@ -29,37 +31,38 @@ html, body {
     height: 100%;
 }
 
-#menu_wrapper{
-	background-color: #fff;
+#menu_wrapper {
+    background-color: #fff;
     border-radius: 4px 4px 0 0;
     border: 1px #ddd;
     box-shadow: none;
     margin-left: 0;
     margin-right: 0;
 }
+
 /*@font-face {*/
-    /*font-family: 'toyota_displaybold';*/
-    /*src: url('../media/fonts/bold/toyotadisplay_bd-webfont.eot');*/
-    /*src: url('../media/fonts/bold/toyotadisplay_bd-webfont.eot?#iefix') format('embedded-opentype'),*/
-    /*url('../media/fonts/bold/toyotadisplay_bd-webfont.woff') format('woff'),*/
-    /*url('../media/fonts/bold/toyotadisplay_bd-webfont.ttf') format('truetype'),*/
-    /*url('../media/fonts/bold/toyotadisplay_bd-webfont.svg#toyota_displaybold') format('svg');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
+/*font-family: 'toyota_displaybold';*/
+/*src: url('../media/fonts/bold/toyotadisplay_bd-webfont.eot');*/
+/*src: url('../media/fonts/bold/toyotadisplay_bd-webfont.eot?#iefix') format('embedded-opentype'),*/
+/*url('../media/fonts/bold/toyotadisplay_bd-webfont.woff') format('woff'),*/
+/*url('../media/fonts/bold/toyotadisplay_bd-webfont.ttf') format('truetype'),*/
+/*url('../media/fonts/bold/toyotadisplay_bd-webfont.svg#toyota_displaybold') format('svg');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
 /*}*/
 
 /*@font-face {*/
-    /*font-family: 'toyota_textregular';*/
-    /*src: url('../media/fonts/regular/toyotatext_rg-webfont.eot');*/
-    /*src: url('../media/fonts/regular/toyotatext_rg-webfont.eot?#iefix') format('embedded-opentype'),*/
-    /*url('../media/fonts/regular/toyotatext_rg-webfont.woff') format('woff'),*/
-    /*url('../media/fonts/regular/toyotatext_rg-webfont.ttf') format('truetype'),*/
-    /*url('../media/fonts/regular/toyotatext_rg-webfont.svg#toyota_textregular') format('svg');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
+/*font-family: 'toyota_textregular';*/
+/*src: url('../media/fonts/regular/toyotatext_rg-webfont.eot');*/
+/*src: url('../media/fonts/regular/toyotatext_rg-webfont.eot?#iefix') format('embedded-opentype'),*/
+/*url('../media/fonts/regular/toyotatext_rg-webfont.woff') format('woff'),*/
+/*url('../media/fonts/regular/toyotatext_rg-webfont.ttf') format('truetype'),*/
+/*url('../media/fonts/regular/toyotatext_rg-webfont.svg#toyota_textregular') format('svg');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
 /*}*/
 
-html , body {
+html, body {
     background: #F8F8F8;
 }
 
@@ -89,13 +92,14 @@ html , body {
 
 /** Header **/
 .loginTitleHeader {
-    color:#FF7400;
+    color: #FF7400;
     /*font-family:'toyota_displaybold';*/
-    text-align:center;
+    text-align: center;
     text-transform: uppercase;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
+
 .container {
     /*padding: 30px;*/
     /*font-family: 'toyota_textregular';*/
@@ -108,7 +112,7 @@ html , body {
     /*font-family: 'toyota_textregular';*/
 }
 
-.loginErrorMessage{
+.loginErrorMessage {
     /*font-family: 'toyota_textregular';*/
     color: #FF7400;
 }
@@ -121,30 +125,30 @@ html , body {
     font-weight: normal;
     /*font-family: 'toyota_displaybold';*/
     color: #4d4f53;
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
 .loginFormContainer {
-    background:#FFFFFF;
+    background: #FFFFFF;
     position: relative;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
 }
 
-.controlLabel{
-    float:left;
+.controlLabel {
+    float: left;
     width: 100px;
     margin-left: 7px;
     text-align: right;
-    margin-top:7px;
+    margin-top: 7px;
     font-weight: normal;
 }
 
-.controlLabelDots{
-    float:left;
+.controlLabelDots {
+    float: left;
     width: 20px;
     margin-left: 30px;
-    margin-top:7px;
+    margin-top: 7px;
 }
 
 /** forgot password**/
@@ -155,7 +159,7 @@ html , body {
 }
 
 .p_loginCheckboxInput {
-    color:#FF7400 !important;
+    color: #FF7400 !important;
     /*font-family:'toyota_textregular';*/
     padding-left: 0;
 }
@@ -174,7 +178,7 @@ html , body {
     /*font-family:'toyota_displaybold';*/
     text-transform: uppercase;
 
-    float:right;
+    float: right;
     height: 100%;
     width: 40%;
     text-align: center;
@@ -183,26 +187,28 @@ html , body {
     border-radius: 0;
 }
 
-.form-line
-{
+.form-line {
     width: 100%;
     padding-bottom: 20px;
 }
-.loginWrapper{
+
+.loginWrapper {
     width: 500px;
     padding-left: 10%;
     padding-right: 10%;
 }
-.loginForgotPasswordContainer
-{
+
+.loginForgotPasswordContainer {
 
 }
+
 .checkbox {
     padding-right: 10px;
 }
-.p_loginSigninButton:hover, .p_loginSigninButton:focus{
+
+.p_loginSigninButton:hover, .p_loginSigninButton:focus {
     color: white;
-    background:#A64B00;
+    background: #A64B00;
 }
 
 /** footer **/
@@ -210,8 +216,8 @@ html , body {
     width: 480px;
     height: 51px;
     min-width: 320px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     text-align: center;
     text-decoration: none;
@@ -224,8 +230,6 @@ html , body {
     margin-right: 7px;
 }
 
-
-
 .loginFooterContainer a:hover {
     text-decoration: underline;
 }
@@ -236,14 +240,15 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #C3C3C3;
-    margin: 1em 0; padding: 0;
+    margin: 1em 0;
+    padding: 0;
 }
 
 /** overrides **/
 .form-control {
     border-radius: 0;
     /*font-family:'toyota_textregular';*/
-    float:left;
+    float: left;
     margin-left: 10px;
     width: 275px;
 }
@@ -262,17 +267,15 @@ hr {
 
 }
 
-.loginInputFixedWidth{
+.loginInputFixedWidth {
     width: 265px;
 }
-
 
 /** VIEW GREATER THAN 700 VIEW **/
 @media only screen and (min-width: 1025px) {
 
-    .loginFooterContainer
-    {
-        margin-top:10px;
+    .loginFooterContainer {
+        margin-top: 10px;
     }
 
     /** test override .form-control **/
@@ -284,12 +287,12 @@ hr {
 /** TABLET VIEW **/
 @media only screen and (max-width: 1024px) {
 
-    .loginFooterContainer
-    {
+    .loginFooterContainer {
 
         /*margin-top:60px;*/
     }
-    .loginContainer{
+
+    .loginContainer {
         margin-top: 30px;
     }
 

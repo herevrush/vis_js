@@ -1,10 +1,9 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "vis_maps",
+  "description": "A visualization for AngularJS google maps",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
-  "private": true,
+  "homepage": "https://github.com/herevrush/vis_js",
+  "license": "vrushali",
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
@@ -12,5 +11,16 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "angular-bootstrap": "~0.14.3"
-  }
+  },
+  "authors": [
+    "v.satpute"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
 }
