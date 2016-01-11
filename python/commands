@@ -1,0 +1,3 @@
+install simplejson.
+mongoimport -d SYD_TRAVEL -c barrier_count --type csv --file resources/Train_Station_Barrier_Counts_2004-2014.csv --headerline
+
