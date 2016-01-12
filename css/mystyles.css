@@ -61,3 +61,8 @@ body {
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
     color: #000000;
 }
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
