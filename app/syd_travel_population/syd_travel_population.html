@@ -1,0 +1,39 @@
+<!--<label>Name:</label>-->
+<!--<input ng-model="firstName" type="text"/>-->
+<!--<input ng-model="lastName" type="text"/>-->
+
+<!--Hello {{firstName}}   {{lastName}}-->
+<div class="container" id="container1">
+    <div class="nav-menu nav nav-pills">
+        <div class="btn-group" uib-dropdown dropdown-append-to-body>
+            <button id="busDropdown" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                Bus trend <span class="caret"></span>
+            </button>
+            <ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
+                <li id="bus-2006" role="menuitem"><a href="#">2006</a></li>
+                <li id="bus-2011" role="menuitem"><a href="#">2011</a></li>
+            </ul>
+        </div>
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+            <button id="railDropdown" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+                Rail trend <span class="caret"></span>
+            </button>
+            <ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
+                <li id="rail-2006" role="menuitem"><a href="#">2006</a></li>
+                <li id="rail-2011" role="menuitem"><a href="#">2011</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="map-canvas"></div>
+</div>
+<!--<ul>-->
+<!--<li ng-repeat="country in countries">-->
+<!--{{country.name}} -- population : {{country.population}}-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--<form ng-submit="addName()">-->
+<!--<input type="text" ng-model="enteredName"/>-->
+<!--<input type="submit" value="Add">-->
+<!--</form>-->
