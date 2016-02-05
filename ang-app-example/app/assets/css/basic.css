@@ -1,0 +1,350 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "metric-regular", Helvetica, Arial, sans-serif;
+}
+
+#map-canvas, #map-canvas2 {
+    height: 700px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+
+#map-canvas1, #map-canvas3 {
+    /*height: 60%;*/
+    /*width: 40%;*/
+    /*margin: 20px;*/
+    /*padding: 20px;*/
+}
+
+#container1 {
+    background: none repeat scroll 0 0 #fff;
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding: 0 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#menu_wrapper {
+    background-color: #fff;
+    border-radius: 4px 4px 0 0;
+    border: 1px #ddd;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*@font-face {*/
+/*font-family: 'toyota_displaybold';*/
+/*src: url('../media/fonts/bold/toyotadisplay_bd-webfont.eot');*/
+/*src: url('../media/fonts/bold/toyotadisplay_bd-webfont.eot?#iefix') format('embedded-opentype'),*/
+/*url('../media/fonts/bold/toyotadisplay_bd-webfont.woff') format('woff'),*/
+/*url('../media/fonts/bold/toyotadisplay_bd-webfont.ttf') format('truetype'),*/
+/*url('../media/fonts/bold/toyotadisplay_bd-webfont.svg#toyota_displaybold') format('svg');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*font-family: 'toyota_textregular';*/
+/*src: url('../media/fonts/regular/toyotatext_rg-webfont.eot');*/
+/*src: url('../media/fonts/regular/toyotatext_rg-webfont.eot?#iefix') format('embedded-opentype'),*/
+/*url('../media/fonts/regular/toyotatext_rg-webfont.woff') format('woff'),*/
+/*url('../media/fonts/regular/toyotatext_rg-webfont.ttf') format('truetype'),*/
+/*url('../media/fonts/regular/toyotatext_rg-webfont.svg#toyota_textregular') format('svg');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+
+html, body {
+    background: #F8F8F8;
+}
+
+/** Container **/
+.loginContainer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C3C3;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 320px;
+}
+
+/** Logo **/
+.loginLogoContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    min-height: 230px;
+    text-align: center;
+}
+
+.loginLogo {
+    padding-bottom: 40px;
+    padding-top: 50px;
+}
+
+/** Header **/
+.loginTitleHeader {
+    color: #FF7400;
+    /*font-family:'toyota_displaybold';*/
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+.container {
+    /*padding: 30px;*/
+    /*font-family: 'toyota_textregular';*/
+}
+
+.loginContainer .loginResponseContainer {
+    height: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*font-family: 'toyota_textregular';*/
+}
+
+.loginErrorMessage {
+    /*font-family: 'toyota_textregular';*/
+    color: #FF7400;
+}
+
+/** Form **/
+.loginContainer .form-group {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: normal;
+    /*font-family: 'toyota_displaybold';*/
+    color: #4d4f53;
+    letter-spacing: 1px;
+}
+
+.loginFormContainer {
+    background: #FFFFFF;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.controlLabel {
+    float: left;
+    width: 100px;
+    margin-left: 7px;
+    text-align: right;
+    margin-top: 7px;
+    font-weight: normal;
+}
+
+.controlLabelDots {
+    float: left;
+    width: 20px;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+
+/** forgot password**/
+.loginForgotPasswordContainer {
+    margin-top: 0;
+    padding-bottom: 30px;
+    padding-left: 166px;
+}
+
+.p_loginCheckboxInput {
+    color: #FF7400 !important;
+    /*font-family:'toyota_textregular';*/
+    padding-left: 0;
+}
+
+/** button **/
+.loginSigninContainer {
+    background-color: #CBCDC9;
+    height: 50px;
+    width: auto;
+}
+
+.p_loginSigninButton {
+    background-color: #FF7400;
+    color: #FFFFFF;
+
+    /*font-family:'toyota_displaybold';*/
+    text-transform: uppercase;
+
+    float: right;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    border-radius: 0;
+}
+
+.form-line {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.loginWrapper {
+    width: 500px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.loginForgotPasswordContainer {
+
+}
+
+.checkbox {
+    padding-right: 10px;
+}
+
+.p_loginSigninButton:hover, .p_loginSigninButton:focus {
+    color: white;
+    background: #A64B00;
+}
+
+/** footer **/
+.loginFooterContainer {
+    width: 480px;
+    height: 51px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    /*font-family:'toyota_textregular';*/
+}
+
+.loginFooterContainer a {
+    color: #4d4f53;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.loginFooterContainer a:hover {
+    text-decoration: underline;
+}
+
+/** separator **/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #C3C3C3;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/** overrides **/
+.form-control {
+    border-radius: 0;
+    /*font-family:'toyota_textregular';*/
+    float: left;
+    margin-left: 10px;
+    width: 275px;
+}
+
+.form-control label {
+    /*font-family:'toyota_displaybold';*/
+}
+
+.form-control input {
+    /*font-family:'toyota_textregular';*/
+}
+
+.form-group {
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.loginInputFixedWidth {
+    width: 265px;
+}
+
+/** VIEW GREATER THAN 700 VIEW **/
+@media only screen and (min-width: 1025px) {
+
+    .loginFooterContainer {
+        margin-top: 10px;
+    }
+
+    /** test override .form-control **/
+    .form-control {
+        height: 34px !important;
+    }
+}
+
+/** TABLET VIEW **/
+@media only screen and (max-width: 1024px) {
+
+    .loginFooterContainer {
+
+        /*margin-top:60px;*/
+    }
+
+    .loginContainer {
+        margin-top: 30px;
+    }
+
+    /** test override .form-control **/
+    .form-control {
+        height: 50px !important;
+    }
+}
+
+/****************/
+/* ajax loader
+/****************/
+.loadContainer {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1003;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.load {
+    height: 100px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    width: 100px;
+}
+
+.load img {
+    width: 75px;
+    height: 75px;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .loadContainer {
+    display: block;
+}

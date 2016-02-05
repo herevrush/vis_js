@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title></title>
+	<meta name="generator" content="LibreOffice 4.2.8.2 (Linux)">
+	<meta name="created" content="20160204;170119604534439">
+	<meta name="changed" content="20160204;170216722330372">
+	<style type="text/css">
+	<!--
+		@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 120% }
+		h3.cjk { font-family: "Droid Sans Fallback" }
+		h3.ctl { font-family: "FreeSans" }
+		pre.cjk { font-family: "Droid Sans Fallback", monospace }
+		a:link { so-language: zxx }
+	-->
+	</style>
+</head>
+<body lang="en-AU" dir="ltr">
+<h3 class="western">Installing Grunt</h3>
+<p><strong>Note</strong>: You should already have <a href="https://eventing.coursera.org/api/redirectStrict/MvNX5V5anmpYHTN_yWIwcJdEfkB9cQ5xyXZmY1YLaEsRB04L0YS-dDpRBKhwTgXav9lXaJwxnJIX1z_k8Ov7ag.QvMyO7tqJzLE1vvIOtuSCA.lI5x4jLVWPFVaZJhdXVJBVNFEGShMac9D3B94frP2hHCxr_DKtYOA4c2jRxMwgluyh68lGJhj5srDbo9hmnFTdjdDVOOwJRVQkjKh0Apg7qLsga1_gpcIhG1ifw568jYcNSy_XnVnrVV4nno_AxtvW-JYItvpKOjtgaYxUv_fhLdTFfF224PSaAdLr4QlOJOoKa7yf3fch63aCSMlF4WhjPKX31W4tqtyKPriSUPHhJVl1s8gKgMjxO3TGRGNNMd" target="_blank">Node</a>
+and NPM installed on your computer before you proceed further. Also,
+those using OSX or Linux should use <strong>sudo</strong> while
+installing <strong>global</strong> packages in node (when you use the
+<strong>-g</strong> flag).</p>
+<ul>
+	<li><p>At the command prompt, type the following to install Grunt
+	command-line interface (CLI):</p>
+</ul>
+<pre class="western" style="margin-bottom: 0.5cm">     npm install -g
+grunt-cli</pre>
+<p>This will install the Grunt CLI globally so that you can use them
+in all projects.</p>
+<ul>
+	<li><p>Next, create the <em>package.json</em> file in the <em>conFusion</em>
+	folder with the following content:</p>
+</ul>
+<pre class="western">{</pre>
+<pre class="western">  &quot;name&quot;: &quot;conFusion&quot;,</pre>
+<pre class="western">  &quot;private&quot;: true,</pre>
+<pre class="western">  &quot;devDependencies&quot;: {</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  },</pre>
+<pre class="western">  &quot;engines&quot;: {</pre>
+<pre class="western">    &quot;node&quot;: &quot;&gt;=0.10.0&quot;</pre>
+<pre class="western">  }</pre>
+<pre class="western" style="margin-bottom: 0.5cm">}</pre>
+<ul>
+	<li><p>Next install Grunt to use within your project. To do this, go
+	to the <em>conFusion</em> folder and type the following at the
+	prompt:</p>
+</ul>
+<pre class="western" style="margin-bottom: 0.5cm">     npm install
+grunt --save-dev</pre>
+<p>This will install local per-project Grunt to use within your
+project.</p>
+<h3 class="western">Creating a Grunt File</h3>
+<ul>
+	<li><p style="margin-bottom: 0cm">Next you need to create a Grunt
+	file containing the configuration for all the tasks to be run when
+	you use Grunt. To do this, create a file named <em>Gruntfile.js</em>
+	in the <em>conFusion</em> folder.</p>
+	<li><p>Next, add the following code to Gruntfile.js to set up the
+	file to configure Grunt tasks:</p>
+</ul>
+<pre class="western">'use strict';</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">module.exports = function (grunt) {</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  // Define the configuration for all the tasks</pre>
+<pre class="western">  grunt.initConfig({</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  });</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">};</pre>
+<pre class="western" style="margin-bottom: 0.5cm"><br><br>
+</pre>
+<p>This sets up the Grunt module ready for including the grunt tasks
+inside the function above.</p>
+<h3 class="western">Configuring the Project</h3>
+<ul>
+	<li><p>Next, we need to configure the menu.html file for this
+	exercise. Open the menu.html file and update the CSS import lines in
+	the head of the page as follows:</p>
+</ul>
+<pre class="western">        &lt;!-- Bootstrap --&gt;</pre>
+<pre class="western">&lt;!-- build:css styles/main.css --&gt;</pre>
+<pre class="western">    &lt;link
+href=&quot;../bower_components/bootstrap/dist/css/bootstrap.min.css&quot;
+rel=&quot;stylesheet&quot;&gt;</pre>
+<pre class="western">    &lt;link
+href=&quot;../bower_components/bootstrap/dist/css/bootstrap-theme.min.css&quot;
+rel=&quot;stylesheet&quot;&gt;</pre>
+<pre class="western">    &lt;link
+href=&quot;../bower_components/font-awesome/css/font-awesome.min.css&quot;
+rel=&quot;stylesheet&quot;&gt;</pre>
+<pre class="western">    &lt;link href=&quot;styles/bootstrap-social.css&quot;
+rel=&quot;stylesheet&quot;&gt;</pre>
+<pre class="western">    &lt;link href=&quot;styles/mystyles.css&quot;
+rel=&quot;stylesheet&quot;&gt;</pre>
+<pre class="western" style="margin-bottom: 0.5cm">&lt;!-- endbuild
+--&gt;</pre>
+<p>We are surrounding the links with some specially formatted comment
+lines, the purpose of which will become clear in a later step.</p>
+<ul>
+	<li><p>Similarly, replace all the script at the bottom of the page
+	with the following code. We will be moving all the Angular script to
+	a separate <em>app.js</em> file in the next step.</p>
+</ul>
+<pre class="western">&lt;!-- build:js scripts/main.js --&gt;</pre>
+<pre class="western">    &lt;script
+src=&quot;../bower_components/angular/angular.min.js&quot;&gt;&lt;/script&gt;</pre>
+<pre class="western">    &lt;script src=&quot;scripts/app.js&quot;&gt;&lt;/script&gt;</pre>
+<pre class="western" style="margin-bottom: 0.5cm">&lt;!-- endbuild
+--&gt;</pre>
+<ul>
+	<li><p>Next, in the app/scripts folder, create a file named <em>app.js</em>
+	and include the following code in this file:</p>
+</ul>
+<pre class="western">'use strict';</pre>
+<pre class="western">angular.module('confusionApp', [])</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">        .controller('menuController', function()
+{</pre>
+<pre class="western">                        this.tab = 1;</pre>
+<pre class="western">            this.filtText = '';</pre>
+<pre class="western">            var dishes=[</pre>
+<pre class="western">                         {</pre>
+<pre class="western">                          name:'Uthapizza',</pre>
+<pre class="western">                          image:
+'images/uthapizza.png',</pre>
+<pre class="western">                          category: 'mains',</pre>
+<pre class="western">                          label:'Hot',</pre>
+<pre class="western">                          price:'4.99',</pre>
+<pre class="western">                          description:'A unique
+combination of Indian Uthappam (pancake) and Italian pizza, topped
+with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion,
+Guntur chillies and Buffalo Paneer.',</pre>
+<pre class="western">                           comment: ''</pre>
+<pre class="western">                        },</pre>
+<pre class="western">                        {</pre>
+<pre class="western">                           name:'Zucchipakoda',</pre>
+<pre class="western">                           image:
+'images/zucchipakoda.png',</pre>
+<pre class="western">                           category:
+'appetizer',</pre>
+<pre class="western">                           label:'',</pre>
+<pre class="western">                           price:'1.99',</pre>
+<pre class="western">                          description:'Deep
+fried Zucchini coated with mildly spiced Chickpea flour batter
+accompanied with a sweet-tangy tamarind sauce',</pre>
+<pre class="western">                           comment: ''</pre>
+<pre class="western">                        },</pre>
+<pre class="western">                        {</pre>
+<pre class="western">                           name:'Vadonut',</pre>
+<pre class="western">                           image:
+'images/vadonut.png',</pre>
+<pre class="western">                           category:
+'appetizer',</pre>
+<pre class="western">                           label:'New',</pre>
+<pre class="western">                           price:'1.99',</pre>
+<pre class="western">                          description:'A
+quintessential ConFusion experience, is it a vada or is it a donut?',</pre>
+<pre class="western">                           comment: ''</pre>
+<pre class="western">                        },</pre>
+<pre class="western">                        {</pre>
+<pre class="western">                           name:'ElaiCheese
+Cake',</pre>
+<pre class="western">                           image:
+'images/elaicheesecake.png',</pre>
+<pre class="western">                          category: 'dessert',</pre>
+<pre class="western">                           label:'',</pre>
+<pre class="western">                          price:'2.99',</pre>
+<pre class="western">                          description:'A
+delectable, semi-sweet New York Style Cheese Cake, with Graham
+cracker crust and spiced with Indian cardamoms',</pre>
+<pre class="western">                           comment: ''</pre>
+<pre class="western">                        }</pre>
+<pre class="western">                        ]; 
+</pre>
+<pre class="western">             this.dishes = dishes;</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">             this.select = function(setTab) {</pre>
+<pre class="western">                this.tab = setTab;</pre>
+<pre class="western">                if (setTab === 2) {</pre>
+<pre class="western">                    this.filtText = &quot;appetizer&quot;;</pre>
+<pre class="western">                }</pre>
+<pre class="western">                else if (setTab === 3) {</pre>
+<pre class="western">                    this.filtText = &quot;mains&quot;;</pre>
+<pre class="western">                }</pre>
+<pre class="western">                else if (setTab === 4) {</pre>
+<pre class="western">                    this.filtText = &quot;dessert&quot;;</pre>
+<pre class="western">                }</pre>
+<pre class="western">                else {</pre>
+<pre class="western">                    this.filtText = &quot;&quot;;</pre>
+<pre class="western">                }</pre>
+<pre class="western">            };</pre>
+<pre class="western">            this.isSelected = function
+(checkTab) {</pre>
+<pre class="western">                return (this.tab === checkTab);</pre>
+<pre class="western">            };</pre>
+<pre class="western" style="margin-bottom: 0.5cm">        });</pre>
+<p>With this change we have moved all the JavaScript code into a
+separate file. This is the normal way that you configure Angular
+projects.</p>
+<h3 class="western">The JSHint Task</h3>
+<ul>
+	<li><p>Next, we are going to set up our first Grunt task. The JSHint
+	task validates our JavaScript code and points out errors and gives
+	warnings about minor violations. To do this, you need to include
+	some Grunt modules that help us with the tasks. Install the
+	following modules by typing the following at the prompt:</p>
+</ul>
+<pre class="western">     npm install grunt-contrib-jshint --save-dev</pre>
+<pre class="western">     npm install jshint-stylish --save-dev</pre>
+<pre class="western">     npm install time-grunt --save-dev</pre>
+<pre class="western" style="margin-bottom: 0.5cm">     npm install
+jit-grunt --save-dev</pre>
+<p>The first one installs the Grunt module for JSHint, and the second
+one adds further to print out the messages from JSHint in a better
+format. The time-grunt module generates time statistics about how
+much time each task consumes, and jit-grunt enables us to include the
+necessary downloaded Grunt modules when needed for the tasks.</p>
+<ul>
+	<li><p>Now, configure the JSHint task in the Gruntfile as follows,
+	by including the code inside the function in <em>Gruntfile.js</em>:</p>
+</ul>
+<pre class="western">  // Time how long tasks take. Can help when
+optimizing build times</pre>
+<pre class="western">  require('time-grunt')(grunt);</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  // Automatically load required Grunt tasks</pre>
+<pre class="western">  require('jit-grunt')(grunt);</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  // Define the configuration for all the tasks</pre>
+<pre class="western">  grunt.initConfig({</pre>
+<pre class="western">          pkg:
+grunt.file.readJSON('package.json'),</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">    // Make sure code styles are up to par and
+there are no obvious mistakes</pre>
+<pre class="western">    jshint: {</pre>
+<pre class="western">      options: {</pre>
+<pre class="western">        jshintrc: '.jshintrc',</pre>
+<pre class="western">        reporter: require('jshint-stylish')</pre>
+<pre class="western">      },</pre>
+<pre class="western">      all: {</pre>
+<pre class="western">        src: [</pre>
+<pre class="western">          'Gruntfile.js',</pre>
+<pre class="western">          'app/scripts/{,*/}*.js'</pre>
+<pre class="western">        ]</pre>
+<pre class="western">      }</pre>
+<pre class="western">    }</pre>
+<pre class="western">  });</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  grunt.registerTask('build', [</pre>
+<pre class="western">    'jshint'</pre>
+<pre class="western">  ]);</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western" style="margin-bottom: 0.5cm"> 
+grunt.registerTask('default',['build']);</pre>
+<p>In the above, we have set up time-grunt and jit-grunt to time the
+tasks, and load Grunt modules when needed. The JSHint task is set to
+examine all the JavaScript files in the app/scripts folder, and the
+Gruntfile.js and generate any reports of JS errors or warnings. We
+have set up a Grunt task named build, that runs the jshint task and
+the build task is also registered as the default task.</p>
+<ul>
+	<li><p>Next, create a file named <em>.jshintrc</em> (Don't forget
+	the . in front of jshintrc) in the conFusion folder, and include the
+	following in the file:</p>
+</ul>
+<pre class="western">{</pre>
+<pre class="western">  &quot;bitwise&quot;: true,</pre>
+<pre class="western">  &quot;browser&quot;: true,</pre>
+<pre class="western">  &quot;curly&quot;: true,</pre>
+<pre class="western">  &quot;eqeqeq&quot;: true,</pre>
+<pre class="western">  &quot;esnext&quot;: true,</pre>
+<pre class="western">  &quot;latedef&quot;: true,</pre>
+<pre class="western">  &quot;noarg&quot;: true,</pre>
+<pre class="western">  &quot;node&quot;: true,</pre>
+<pre class="western">  &quot;strict&quot;: true,</pre>
+<pre class="western">  &quot;undef&quot;: true,</pre>
+<pre class="western">  &quot;unused&quot;: true,</pre>
+<pre class="western">  &quot;globals&quot;: {</pre>
+<pre class="western">    &quot;angular&quot;: false</pre>
+<pre class="western">  }</pre>
+<pre class="western" style="margin-bottom: 0.5cm">}</pre>
+<ul>
+	<li><p>Now you can run the grunt task by typing the following at the
+	prompt:</p>
+</ul>
+<pre class="western" style="margin-bottom: 0.5cm">     grunt</pre>
+<h3 class="western">Copying the Files and Cleaning Up the Dist Folder</h3>
+<ul>
+	<li><p>Next you will install the Grunt modules to copy over files to
+	a distribution folder named dist, and clean up the dist folder when
+	needed. To do this, install the following Grunt modules:</p>
+</ul>
+<pre class="western">     npm install grunt-contrib-copy --save-dev</pre>
+<pre class="western" style="margin-bottom: 0.5cm">     npm install
+grunt-contrib-clean --save-dev</pre>
+<ul>
+	<li><p>You will now add the code to perform the copying of files to
+	the dist folder, and cleaning up the dist folder. To do this, add
+	the following code to <em>Gruntfile.js</em>. This should be added
+	right after the configuration of the JSHint task.:</p>
+</ul>
+<pre class="western">    },</pre>
+<pre class="western">    copy: {</pre>
+<pre class="western">      dist: {</pre>
+<pre class="western">        cwd: 'app',</pre>
+<pre class="western">        src: [
+'**','!styles/**/*.css','!scripts/**/*.js' ],</pre>
+<pre class="western">        dest: 'dist',</pre>
+<pre class="western">        expand: true</pre>
+<pre class="western">      },</pre>
+<pre class="western">      fonts: {</pre>
+<pre class="western">          files:[</pre>
+<pre class="western">              {</pre>
+<pre class="western">                  //for bootstrap fonts</pre>
+<pre class="western">                    expand: true,</pre>
+<pre class="western">                    dot: true,</pre>
+<pre class="western">                    cwd:
+'bower_components/bootstrap/dist',</pre>
+<pre class="western">                    src: ['fonts/*.*'],</pre>
+<pre class="western">                    dest: 'dist'</pre>
+<pre class="western">                }, {</pre>
+<pre class="western">                    //for font-awesome</pre>
+<pre class="western">                    expand: true,</pre>
+<pre class="western">                    dot: true,</pre>
+<pre class="western">                    cwd:
+'bower_components/font-awesome',</pre>
+<pre class="western">                    src: ['fonts/*.*'],</pre>
+<pre class="western">                    dest: 'dist'</pre>
+<pre class="western">                }</pre>
+<pre class="western">          ]</pre>
+<pre class="western">        }</pre>
+<pre class="western">    },</pre>
+<pre class="western">    clean: {</pre>
+<pre class="western">        build:{</pre>
+<pre class="western">            src: [ 'dist/']</pre>
+<pre class="western">        }</pre>
+<pre class="western" style="margin-bottom: 0.5cm">    }</pre>
+<ul>
+	<li><p>Then, update the Grunt build task in the file as follows:</p>
+</ul>
+<pre class="western">  grunt.registerTask('build', [</pre>
+<pre class="western">    'clean',</pre>
+<pre class="western">    'jshint',</pre>
+<pre class="western">    'copy'</pre>
+<pre class="western" style="margin-bottom: 0.5cm">  ]);</pre>
+<ul>
+	<li><p>You can run Grunt and see what it generates.</p>
+</ul>
+<h3 class="western">Preparing the Distribution Folder and Files</h3>
+<ul>
+	<li><p>We are now going to use the Grunt <em>usemin</em> module
+	together with <em>concat</em>, <em>cssmin</em>, <em>uglify</em> and
+	<em>filerev</em> to prepare the distribution folder. To do this,
+	install the following Grunt modules:</p>
+</ul>
+<pre class="western">     npm install grunt-contrib-concat --save-dev</pre>
+<pre class="western">     npm install grunt-contrib-cssmin --save-dev</pre>
+<pre class="western">     npm install grunt-contrib-uglify --save-dev</pre>
+<pre class="western">     npm install grunt-filerev --save-dev</pre>
+<pre class="western" style="margin-bottom: 0.5cm">     npm install
+grunt-usemin --save-dev</pre>
+<ul>
+	<li><p>Next, update the task configuration within the Gruntfile.js
+	with the following additional code to introduce the new tasks:</p>
+</ul>
+<pre class="western">    },</pre>
+<pre class="western">    useminPrepare: {</pre>
+<pre class="western">        html: 'app/menu.html',</pre>
+<pre class="western">        options: {</pre>
+<pre class="western">            dest: 'dist'</pre>
+<pre class="western">        }</pre>
+<pre class="western">    },</pre>
+<pre class="western">      // Concat</pre>
+<pre class="western">    concat: {</pre>
+<pre class="western">        options: {</pre>
+<pre class="western">            separator: ';'</pre>
+<pre class="western">        },</pre>
+<pre class="western">        // dist configuration is provided by
+useminPrepare</pre>
+<pre class="western">        dist: {}</pre>
+<pre class="western">    },</pre>
+<pre class="western">      // Uglify</pre>
+<pre class="western">    uglify: {</pre>
+<pre class="western">        // dist configuration is provided by
+useminPrepare</pre>
+<pre class="western">        dist: {}</pre>
+<pre class="western">    },</pre>
+<pre class="western">    cssmin: {</pre>
+<pre class="western">        dist: {}</pre>
+<pre class="western">    },</pre>
+<pre class="western">      // Filerev</pre>
+<pre class="western">    filerev: {</pre>
+<pre class="western">        options: {</pre>
+<pre class="western">            encoding: 'utf8',</pre>
+<pre class="western">            algorithm: 'md5',</pre>
+<pre class="western">            length: 20</pre>
+<pre class="western">        },</pre>
+<pre class="western">        release: {</pre>
+<pre class="western">            // filerev:release hashes(md5) all
+assets (images, js and css )</pre>
+<pre class="western">            // in dist directory</pre>
+<pre class="western">            files: [{</pre>
+<pre class="western">                src: [</pre>
+<pre class="western">                    'dist/scripts/*.js',</pre>
+<pre class="western">                    'dist/styles/*.css',</pre>
+<pre class="western">                ]</pre>
+<pre class="western">            }]</pre>
+<pre class="western">        }</pre>
+<pre class="western">    },</pre>
+<pre class="western">      // Usemin</pre>
+<pre class="western">      // Replaces all assets with their revved
+version in html and css files.</pre>
+<pre class="western">      // options.assetDirs contains the
+directories for finding the assets</pre>
+<pre class="western">      // according to their relative paths</pre>
+<pre class="western">    usemin: {</pre>
+<pre class="western">        html: ['dist/*.html'],</pre>
+<pre class="western">        css: ['dist/styles/*.css'],</pre>
+<pre class="western">        options: {</pre>
+<pre class="western">            assetsDirs: ['dist', 'dist/styles']</pre>
+<pre class="western">        }</pre>
+<pre class="western" style="margin-bottom: 0.5cm">    },</pre>
+<ul>
+	<li><p>Next, update the jit-grunt configuration as follows, to
+	inform it that useminPrepare task depends on the usemin package:</p>
+</ul>
+<pre class="western">  require('jit-grunt')(grunt, {</pre>
+<pre class="western">    useminPrepare: 'grunt-usemin'</pre>
+<pre class="western" style="margin-bottom: 0.5cm">  });</pre>
+<ul>
+	<li><p>Next, update the Grunt build task as follows:</p>
+</ul>
+<pre class="western">  grunt.registerTask('build', [</pre>
+<pre class="western">    'clean',</pre>
+<pre class="western">    'jshint',</pre>
+<pre class="western">    'useminPrepare',</pre>
+<pre class="western">    'concat',</pre>
+<pre class="western">    'cssmin',</pre>
+<pre class="western">    'uglify',</pre>
+<pre class="western">    'copy',</pre>
+<pre class="western">    'filerev',</pre>
+<pre class="western">    'usemin'</pre>
+<pre class="western" style="margin-bottom: 0.5cm">  ]);</pre>
+<ul>
+	<li><p>Now if you run Grunt, it will create a dist folder with the
+	files structured correctly to be distributed to a server to host
+	your website.</p>
+</ul>
+<h3 class="western">Watch, Connect and Serve Tasks</h3>
+<ul>
+	<li><p>The final step is to use the Grunt modules watch, connect and
+	watch, to spin up a web server and keep a watch on the files and
+	automatically reload the browser when any of the watched files are
+	updated. To do this, install the following grunt modules:</p>
+</ul>
+<pre class="western">     npm install grunt-contrib-watch --save-dev</pre>
+<pre class="western" style="margin-bottom: 0.5cm">     npm install
+grunt-contrib-connect --save-dev</pre>
+<ul>
+	<li><p>After this, we will configure the connect and watch tasks by
+	adding the following code to the Grunt file:</p>
+</ul>
+<pre class="western">    watch: {</pre>
+<pre class="western">        copy: {</pre>
+<pre class="western">            files: [ 'app/**', '!app/**/*.css',
+'!app/**/*.js'],</pre>
+<pre class="western">            tasks: [ 'build' ]</pre>
+<pre class="western">        },</pre>
+<pre class="western">        scripts: {</pre>
+<pre class="western">            files: ['app/scripts/app.js'],</pre>
+<pre class="western">            tasks:[ 'build']</pre>
+<pre class="western">        },</pre>
+<pre class="western">        styles: {</pre>
+<pre class="western">            files: ['app/styles/mystyles.css'],</pre>
+<pre class="western">            tasks:['build']</pre>
+<pre class="western">        },</pre>
+<pre class="western">        livereload: {</pre>
+<pre class="western">            options: {</pre>
+<pre class="western">                livereload: '&lt;%=
+connect.options.livereload %&gt;'</pre>
+<pre class="western">            },</pre>
+<pre class="western">            files: [</pre>
+<pre class="western">                'app/{,*/}*.html',</pre>
+<pre class="western">                '.tmp/styles/{,*/}*.css',</pre>
+<pre class="western">               
+'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'</pre>
+<pre class="western">            ]</pre>
+<pre class="western">      }</pre>
+<pre class="western">    },</pre>
+<pre class="western">    connect: {</pre>
+<pre class="western">      options: {</pre>
+<pre class="western">        port: 9000,</pre>
+<pre class="western">        // Change this to '0.0.0.0' to access
+the server from outside.</pre>
+<pre class="western">        hostname: 'localhost',</pre>
+<pre class="western">        livereload: 35729</pre>
+<pre class="western">      },</pre>
+<pre class="western">      dist: {</pre>
+<pre class="western">        options: {</pre>
+<pre class="western">          open: true,</pre>
+<pre class="western">          base:{</pre>
+<pre class="western">               path: 'dist',</pre>
+<pre class="western">            options: {</pre>
+<pre class="western">                index: 'menu.html',</pre>
+<pre class="western">                maxAge: 300000</pre>
+<pre class="western">            }</pre>
+<pre class="western">          }</pre>
+<pre class="western">        }</pre>
+<pre class="western">      }</pre>
+<pre class="western" style="margin-bottom: 0.5cm">    },</pre>
+<ul>
+	<li><p>Then add the following task to the Grunt file:</p>
+</ul>
+<pre class="western" style="margin-bottom: 0.5cm"> 
+grunt.registerTask('serve',['build','connect:dist','watch']);</pre>
+<ul>
+	<li><p>Now if you type the following at the command prompt, it will
+	build the project, and open the web page in your default browser. It
+	will also keep a watch on the files in the app folder, and if you
+	update any of them, it will rebuild the project and load the updated
+	page into the browser (livereload)</p>
+</ul>
+<pre class="western" style="margin-bottom: 0.5cm">     grunt serve</pre>
+<p style="margin-bottom: 0cm; line-height: 100%"><br>
+</p>
+</body>
+</html>
